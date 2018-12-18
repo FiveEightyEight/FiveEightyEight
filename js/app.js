@@ -16,7 +16,7 @@ const GETRequest = (url, cb) => {
 const gitRepos = (type) => {
 
     // const userName = 'FiveEightEight';
-    const readID = '45be248683d35e5b5bca592d5551defc031da312';
+        
     const ID = `?access_token=${readID}`
     // const url = `https://api.github.com/users/:${userName}/repos`;
     //https://api.github.com/users/FiveEightyEight/repos
