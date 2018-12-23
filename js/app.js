@@ -1,6 +1,10 @@
 // const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 
+// ----------------- Modules & Globals ----------------->> >
+// const http = require('https');
+
+
 // ----------------- Helper Functions ----------------->> >
 const GETRequest = (url, cb) => {
     let request = new XMLHttpRequest();
@@ -13,20 +17,41 @@ const GETRequest = (url, cb) => {
     request.send();
 };
 
-const gitRepos = (type) => {
 
-    // const userName = 'FiveEightEight';
-        
-    const ID = `?access_token=${readID}`
-    // const url = `https://api.github.com/users/:${userName}/repos`;
-    //https://api.github.com/users/FiveEightyEight/repos
-    const url = `https://api.github.com/${ID}/users/FiveEightyEight/repos`
 
-    
+// ----------------- Events ----------------->> >
 
-    GETRequest(url, data => {
-        console.log(data)
-    })
-}
+// http.get('https://github.com/FiveEightyEight', (res) => {
+//     console.log(res);
+// })
 
-gitRepos();
+const FiveEightyEight = () => {
+    GETRequest('https://github.com/FiveEightyEight', data => {
+        console.log(data);
+        });
+};
+
+// ----------------- State ----------------->> >
+
+let state = {
+
+    nav: [],
+
+    sideBar : [],
+
+    main: [], 
+
+};
+
+
+// ----------------- Render ----------------->> >
+
+const render = (state) => {
+
+};
+
+// ----------------- Load Save ----------------->> >
+
+render(state);
+
+FiveEightyEight();
